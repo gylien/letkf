@@ -1,10 +1,13 @@
 #!/bin/sh
 set -ex
 PGM=obsmake.s01
-F90=pgf90
+#F90=intel
+F90=gfortran
 OMP=
-F90OPT='-byteswapio -tp p7-64 -fast -O3'
-INLINE="-Minline"
+#F90OPT='-byteswapio -tp p7-64 -fast -O3'
+F90OPT='-fconvert=swap -O3'
+#INLINE="-Minline"
+INLINE=
 
 sh ulnkcommon.sh
 sh lnkcommon.sh

@@ -1,5 +1,7 @@
 ###COMPILE=f77
-COMPILE=pgf90
+#COMPILE=pgf90
+COMPILE=gfortran
+
 
 ###COMLIB1= -xlic_lib=sunperf 
 #COMLIB1=-lcomplib.sgimath
@@ -8,10 +10,12 @@ COMPILE=pgf90
 #COMOTT1=-dalign -O3 -r8
 ###COMOTT1=-dalign -fast -r8
 #COMOTT1=-Ofast -mips4 -IPA -r8
- COMOTT1=  -fast -O3 -r8
+# COMOTT1=  -fast -O3 -r8
+ COMOTT1=  -O3 -fdefault-real-8 -fdefault-double-8
 ### COMOTT1=  -fast  
 
- COMCONV= -byteswapio 
+# COMCONV= -byteswapio 
+ COMCONV = -fconvert=swap
 
 FILES= \
        dyn_geop.o \

@@ -303,7 +303,7 @@ SUBROUTINE set_letkf_obs
     END DO
     IF(nn /= nj(j)) THEN
 !$OMP CRITICAL
-      WRITE(6,'(A,2I)') 'OBS DATA SORT ERROR: ',nn,nj(j)
+      WRITE(6,'(A,2I8)') 'OBS DATA SORT ERROR: ',nn,nj(j)
       WRITE(6,'(F6.2,A,F6.2)') lat(j),'< LAT <',lat(j+1)
       WRITE(6,'(F6.2,A,F6.2)') MINVAL(tmp2lat(njs(j)+1:njs(j)+nj(j))),'< OBSLAT <',MAXVAL(tmp2lat(njs(j)+1:njs(j)+nj(j)))
 !$OMP END CRITICAL

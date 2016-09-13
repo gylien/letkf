@@ -72,7 +72,7 @@ PROGRAM obsmake
     nstation = nstation + 1
   END DO
   CLOSE(10)
-  IF(verbose) PRINT '(A,I)','nstation = ',nstation
+  IF(verbose) PRINT '(A,I8)','nstation = ',nstation
   !
   ! Count number of obs
   !
@@ -84,7 +84,7 @@ PROGRAM obsmake
       nobs = nobs + nstation*nlev
     END IF
   END DO
-  IF(verbose) PRINT '(A,I)','nobs = ',nobs
+  IF(verbose) PRINT '(A,I8)','nobs = ',nobs
   !
   ! Random number
   !

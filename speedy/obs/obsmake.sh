@@ -2,7 +2,7 @@
 CDIR=`pwd`
 cd ..
 SPEEDY=`pwd`
-EXP=reg3
+EXP=raob
 TRUEDIR=$SPEEDY/DATA/nature
 OBSDIR=$SPEEDY/DATA/$EXP/obs
 PGM=obsmake.s01

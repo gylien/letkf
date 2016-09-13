@@ -3,8 +3,10 @@ set -ex
 PGM=letkf020.m01
 F90=mpif90
 OMP=
-F90OPT='-byteswapio -tp p7-64 -fast -O3'
-INLINE="-Minline"
+#F90OPT='-byteswapio -tp p7-64 -fast -O3'
+F90OPT='-fconvert=swap -O3'
+#INLINE="-Minline"
+INLINE=
 BLAS=1 #0: no blas 1: using blas
 
 sh ulnkcommon.sh

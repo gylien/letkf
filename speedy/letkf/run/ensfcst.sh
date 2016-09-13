@@ -3,7 +3,7 @@
 # ensfcst.sh
 #   This script runs the SPEEDY model with subdirectory $NODE
 #=======================================================================
-set -e
+#set -e
 ### input for this shell
 SPEEDY=$1
 OUTPUT=$2

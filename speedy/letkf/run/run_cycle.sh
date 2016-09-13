@@ -32,9 +32,9 @@ EMM=01
 EDD=01
 EHH=00
 ### mpd
-echo '>>> mpdboot'
-mpdboot -n 1
-mpdtrace
+#echo '>>> mpdboot'
+#mpdboot -n 1
+#mpdtrace
 #-----------------------------------------------------------------------
 # Usually do not modify below
 #-----------------------------------------------------------------------
@@ -215,5 +215,5 @@ IDD=$TD
 IHH=$TH
 done
 
-mpdallexit
+#mpdallexit
 echo "NORMAL END"
