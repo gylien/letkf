@@ -1,10 +1,13 @@
 #!/bin/sh
 set -ex
 PGM=obsmake.s01
-F90=pgf90
+#F90=pgf90
+F90=ifort
 OMP=
-F90OPT='-byteswapio -tp p7-64 -fast -O3'
-INLINE="-Minline"
+#F90OPT='-byteswapio -tp p7-64 -fast -O3'
+F90OPT='-convert big_endian -O3 -xHost -assume byterecl'
+#INLINE="-Minline"
+INLINE=
 
 sh ulnkcommon.sh
 sh lnkcommon.sh

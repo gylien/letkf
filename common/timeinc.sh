@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+#set -e
 
 function timeinc6hr
 {

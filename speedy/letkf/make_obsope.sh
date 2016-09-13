@@ -1,10 +1,13 @@
 #!/bin/sh
 set -ex
 PGM=obsope.s01
-F90=pgf90
+#F90=pgf90
+F90=ifort
 OMP=
-F90OPT='-byteswapio -tp sandybridge-64 -fast -O3'
-INLINE="-Minline"
+#F90OPT='-byteswapio -tp sandybridge-64 -fast -O3'
+F90OPT='-convert big_endian -O3 -xHost -assume byterecl'
+#INLINE="-Minline"
+INLINE=
 BLAS=1 #0: no blas 1: using blas
 
 sh ulnkcommon.sh

@@ -1,5 +1,6 @@
 ###COMPILE=f77
-COMPILE=pgf90
+#COMPILE=pgf90
+COMPILE=ifort
 
 ###COMLIB1= -xlic_lib=sunperf 
 #COMLIB1=-lcomplib.sgimath
@@ -8,10 +9,12 @@ COMPILE=pgf90
 #COMOTT1=-dalign -O3 -r8
 ###COMOTT1=-dalign -fast -r8
 #COMOTT1=-Ofast -mips4 -IPA -r8
- COMOTT1=  -fast -O3 -r8
+# COMOTT1=  -fast -O3 -r8
+ COMOTT1= -O3 -xHost -r8 -assume byterecl
 ### COMOTT1=  -fast  
 
- COMCONV= -byteswapio 
+# COMCONV= -byteswapio 
+ COMCONV= -convert big_endian
 
 FILES= \
        dyn_geop.o \

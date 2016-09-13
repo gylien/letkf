@@ -4,7 +4,7 @@
 #   To run the SPEEDY model for forecast-forecast cycle, useful to
 #   generate a nature run.
 #=======================================================================
-set -e
+#set -e
 #-----------------------------------------------------------------------
 # Modify below according to your environment
 #-----------------------------------------------------------------------

@@ -32,9 +32,9 @@ EMM=01
 EDD=01
 EHH=00
 ### mpd
-echo '>>> mpdboot'
-mpdboot -n 1
-mpdtrace
+#echo '>>> mpdboot'
+#mpdboot -n 1
+#mpdtrace
 #-----------------------------------------------------------------------
 # Usually do not modify below
 #-----------------------------------------------------------------------
@@ -118,7 +118,8 @@ then
 ln -s $OUTPUT/infl_mul/$IYYYY$IMM$IDD$IHH.grd infl_mul.grd
 fi
 ### mpiexec
-mpiexec -n $NODE ./$LETKF < /dev/null
+#mpiexec -n $NODE ./$LETKF < /dev/null
+mpirun $NODE ./$LETKF < /dev/null
 tail -n 17 NOUT-000
 ### outputs
 mv NOUT-000 $OUTPUT/log/$IYYYY$IMM$IDD$IHH.log
@@ -215,5 +216,5 @@ IDD=$TD
 IHH=$TH
 done
 
-mpdallexit
+#mpdallexit
 echo "NORMAL END"

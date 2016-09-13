@@ -7,7 +7,7 @@
 #   everywhere and constant T with vertical profile of the standard
 #   atmosphere.
 #=======================================================================
-set -e
+#set -e
 #-----------------------------------------------------------------------
 # Modify below according to your environment
 #-----------------------------------------------------------------------
